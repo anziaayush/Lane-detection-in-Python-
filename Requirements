@@ -1,8 +1,4 @@
+3. requirements.txt
 
-***
-
-## 3. requirements.txt
-
-```text
 opencv-python
 numpy
