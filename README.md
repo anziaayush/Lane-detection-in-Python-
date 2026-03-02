@@ -1,39 +1,38 @@
-# Lane Detection System (Python, OpenCV)
+Advanced Lane Finding
 
-A simple computer vision project for detecting lane lines in dashcam videos using classical image processing with Canny edge detection and Hough transform.
+Udacity - Self-Driving Car NanoDegree
 
-## Goal
+The Project
 
-- Detect lane lines in a video stream.
-- Visualize the detected lanes on top of the video.
-- Provide a clean, understandable pipeline in Python using OpenCV.
+The goals / steps of this project are the following:
 
-## Techniques Used
+Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
+Apply a distortion correction to raw images.
+Apply a perspective transform to rectify binary image ("birds-eye view").
+Use color transforms, gradients, etc., to create a thresholded binary image.
+Detect lane pixels and fit to find the lane boundary.
+Determine the curvature of the lane and vehicle position with respect to center.
+Warp the detected lane boundaries back onto the original image.
+Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+The images for camera calibration are stored in the folder called camera_cal. The images in test_images are for testing your pipeline on single frames.
 
-- Grayscale conversion
-- Gaussian blur for smoothing / noise reduction
-- Canny edge detection
-- Region-of-interest masking (road area)
-- Hough line transform for line detection
-- Simple filtering and averaging of left / right lane lines
-- Overlay of detected lanes on the original frame
+The challenge_video.mp4 video is an extra (and optional) challenge for you if you want to test your pipeline under somewhat trickier conditions. The harder_challenge.mp4 video is another optional challenge and is brutal!
 
-## Installation
+If you're feeling ambitious (again, totally optional though), don't stop there! We encourage you to go out and take video of your own, calibrate your camera and show us how you would implement this project from scratch!
 
-```bash
-git clone https://github.com/<your-username>/lane-detection-opencv.git
-cd lane-detection-opencv
+Usage:
 
-# for cv2 
-pip install opencv-python
+1. Set up the environment
 
-#for numpy
-pip show numpy
-pip install numpy/ pip3 install numpy
+conda env create -f environment.yml
 
-# Optional virtual environment
-# python -m venv .venv
-# source .venv/bin/activate  # Linux/macOS
-# .venv\Scripts\activate     # Windows
+To activate the environment:
 
-pip install -r requirements.txt
+Window: conda activate carnd
+
+Linux, MacOS: source activate carnd
+
+2. Run the pipeline:
+
+python main.py INPUT_IMAGE OUTPUT_IMAGE_PATH
+python main.py --video INPUT_VIDEO OUTPUT_VIDEO_PATH
