@@ -24,6 +24,13 @@ A simple computer vision project for detecting lane lines in dashcam videos usin
 git clone https://github.com/<your-username>/lane-detection-opencv.git
 cd lane-detection-opencv
 
+# for cv2 
+pip install opencv-python
+
+#for numpy
+pip show numpy
+pip install numpy/ pip3 install numpy
+
 # Optional virtual environment
 # python -m venv .venv
 # source .venv/bin/activate  # Linux/macOS
